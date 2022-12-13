@@ -295,7 +295,7 @@ function _database_install_cms() {
       mysql -u$DB_USER $PASS_PARAM -e "drop database $CMSdbName" || { echo "[[Please fix above MySQL error.]]"; exit 1;  }
   fi
   # Create database.
-  mysql -u$DB_USER $PASS_PARAM -e "create database $CMSdbName" || { echo "[[Please fix above MySQL error.]]"; exit 1;  }
+  # mysql -u$DB_USER $PASS_PARAM -e "create database $CMSdbName" || { echo "[[Please fix above MySQL error.]]"; exit 1;  }
   # Assign values to global variables.
   [ -z "$CMS_DB_USER" ]           && CMS_DB_USER="$DB_USER"
   [ -z "$CMS_DB_PASS" ]           && CMS_DB_PASS="$DB_PASS"
