@@ -323,7 +323,7 @@ function _database_install_civi() {
       mysql -u$DB_USER $PASS_PARAM -e "drop database $CIVIdbName" || { echo "[[Please fix above MySQL error.]]"; exit 1;  }
   fi
   # Create database.
-  mysql -u$DB_USER $PASS_PARAM -e "create database $CIVIdbName" || { echo "[[Please fix above MySQL error.]]"; exit 1;  }
+  # mysql -u$DB_USER $PASS_PARAM -e "create database $CIVIdbName" || { echo "[[Please fix above MySQL error.]]"; exit 1;  }
   # Assign values to global variables.
   [ -z "$CIVI_DB_USER" ]           && CIVI_DB_USER="$DB_USER"
   [ -z "$CIVI_DB_PASS" ]           && CIVI_DB_PASS="$DB_PASS"
